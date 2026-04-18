@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The GiveHER Effect – DEVCON Manila</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Loading Animation -->
+    <div class="loader"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <span class="brand-she">She is</span>
+                <span class="brand-devcon">DEVCON</span>
+                <span class="brand-manila">Manila</span>
+            </a>
+            <!-- DEVCON Manila Logo Placeholder – replace with <img src="logo.png"> -->
+            <div class="logo-placeholder" title="DEVCON Manila Logo">
+                <img src="public/manila.png" alt="DEVCON Manila" class="logo-img">
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#speakers">Speakers</a>
+                <a href="#program">Program</a>
+                <a href="#commute">How to Get There</a>
+                <a href="#faq">FAQs</a>
+                <a href="#sponsors">Sponsors</a>
+                <a href="#partners">Partners</a>
+                <a href="#register" class="nav-cta">Register</a>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <!-- Moon = shown in light mode; Sun = shown in dark mode -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-tag">She is DEVCON × DEVCON Manila</div>
+            <img src="public/givee.png" alt="The GiveHER Effect" class="hero-title-img">
+            <p class="hero-sub">Powering the Future of AI and Robotics</p>
+            <p class="hero-theme">Empowering Women in Emerging Technologies through Mentorship, Innovation, and Inclusive Leadership</p>
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+                    <div>
+                        <strong>White Cloak (WCHQ)</strong>
+                        <span>20F Strata 2000, Ortigas, Pasig</span>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+                    <div>
+                        <strong>1:00 PM Onwards</strong>
+                        <span>Doors open 12:30 PM</span>
+                    </div>
+                </div>
+            </div>
+            <a href="https://luma.com/42p2zhkb" target="_blank" class="btn-primary hero-btn">Register Now — It's Free</a>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card floating">
+                <div class="hc-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="hc-label">Give to Gain</div>
+                <div class="hc-desc">Pay it forward in tech</div>
+            </div>
+            <div class="hero-card floating delay-1">
+                <div class="hc-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+                </div>
+                <div class="hc-label">AI &amp; Robotics</div>
+                <div class="hc-desc">Women shaping the future</div>
+            </div>
+            <div class="hero-card floating delay-2">
+                <div class="hc-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="hc-label">Mentorship</div>
+                <div class="hc-desc">Connect · Learn · Grow</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-label">About the Event</div>
+            <h2 class="section-title">What is the GiveHER Effect?</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>The GiveHER Effect: Powering the Future of AI and Robotics is an empowering gathering that celebrates the role of women in shaping the future of emerging technologies.</p>
+                    <p>This event highlights how women in AI and robotics uplift one another through mentorship, shared knowledge, and meaningful opportunities. Grounded in the principle of <strong>"Give to Gain,"</strong> the initiative fosters a culture
+                        of paying it forward.</p>
+                    <p>By bringing together aspiring technologists, professionals, and advocates, the event aims to cultivate inclusive spaces, strengthen networks, and inspire the next generation of women leaders in tech.</p>
+                </div>
+                <div class="objectives-card">
+                    <h3>Our Objectives</h3>
+                    <ul class="obj-list">
+                        <li><span>01</span> Empower women in AI &amp; robotics by showcasing role models</li>
+                        <li><span>02</span> Promote mentorship and knowledge-sharing</li>
+                        <li><span>03</span> Build inclusive, supportive networks</li>
+                        <li><span>04</span> Inspire careers in emerging technologies</li>
+                        <li><span>05</span> Encourage a "pay-it-forward" culture in tech</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKERS -->
+    <section class="section speakers-section" id="speakers">
+        <div class="container">
+            <div class="section-label">Featured Speakers</div>
+            <h2 class="section-title">Meet the Women Powering Change</h2>
+            <div class="speakers-grid">
+
+                <div class="speaker-card featured">
+                    <div class="speaker-img-wrap">
+                        <img src="public/aem.jpg" alt="Ms. Armielyn Obinguar" class="speaker-img">
+                        <div class="speaker-tag">Speaker 1</div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Ms. Armielyn Obinguar</h3>
+                        <p class="speaker-role">Speaker · AI &amp; Robotics</p>
+                        <p class="speaker-bio">A tech advocate passionate about AI and innovation, dedicated to empowering future leaders through mentorship and inclusive collaboration.</p>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrap">
+                        <img src="public/rach.jpg" alt="Ms. Rachelle Perez" class="speaker-img">
+                        <div class="speaker-tag">Speaker 2</div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Ms. Rachelle Perez</h3>
+                        <p class="speaker-role">Speaker · Analytics &amp; AI</p>
+                        <p class="speaker-bio">An Associate Manager and Analytics Lead who bridges industry and education by mentoring aspiring professionals in data and AI.</p>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-img-wrap">
+                        <img src="public/eze.jpg" alt="Ms. Ezekielle Liwanag" class="speaker-img">
+                        <div class="speaker-tag">Speaker 3</div>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>Ms. Ezekielle Liwanag</h3>
+                        <p class="speaker-role">Speaker · AI &amp; Robotics</p>
+                        <p class="speaker-bio">An emerging technologist with a strong interest in AI and robotics, representing the next generation of innovative leaders.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM FLOW -->
+    <section class="section program-section" id="program">
+        <div class="container">
+            <div class="section-label">Event Schedule</div>
+            <h2 class="section-title">Program Flow</h2>
+            <div class="program-meta-row">
+                <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          On-site Event
+        </span>
+                <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          White Cloak, 20F Strata 2000
+        </span>
+                <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          1:00 PM start
+        </span>
+            </div>
+            <div class="timeline">
+                <div class="tl-item prep">
+                    <div class="tl-time">11:00 AM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Setup</div>
+                        <div class="tl-title">Ingress / Venue Preparation</div>
+                        <div class="tl-by">Organizers &amp; Volunteers</div>
+                    </div>
+                </div>
+                <div class="tl-item prep">
+                    <div class="tl-time">12:30 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Registration</div>
+                        <div class="tl-title">Participant Check-in</div>
+                        <div class="tl-by">Organizers</div>
+                    </div>
+                </div>
+                <div class="tl-item main">
+                    <div class="tl-time">1:00 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Opening</div>
+                        <div class="tl-title">Opening AVP / Welcome Energy Setter</div>
+                        <div class="tl-by">Host</div>
+                    </div>
+                </div>
+                <div class="tl-item main">
+                    <div class="tl-time">1:05 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Remarks</div>
+                        <div class="tl-title">Opening Remarks</div>
+                        <div class="tl-by">Luisa Gwyneth Gonzales</div>
+                    </div>
+                </div>
+                <div class="tl-item talk">
+                    <div class="tl-time">1:10 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Speaker 1</div>
+                        <div class="tl-title">Talk + Q&amp;A</div>
+                        <div class="tl-by">Ms. Rachelle Perez</div>
+                    </div>
+                </div>
+                <div class="tl-item talk">
+                    <div class="tl-time">1:40 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Speaker 2</div>
+                        <div class="tl-title">Talk + Q&amp;A</div>
+                        <div class="tl-by">Ms. Ezekielle Liwanag</div>
+                    </div>
+                </div>
+                <div class="tl-item break">
+                    <div class="tl-time">2:10 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Break</div>
+                        <div class="tl-title">Snack Break &amp; Networking</div>
+                        <div class="tl-by">Ushers &amp; Organizers</div>
+                    </div>
+                </div>
+                <div class="tl-item talk">
+                    <div class="tl-time">2:30 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Speaker 3</div>
+                        <div class="tl-title">Talk + Q&amp;A</div>
+                        <div class="tl-by">Sponsor Representative</div>
+                    </div>
+                </div>
+                <div class="tl-item main">
+                    <div class="tl-time">3:00 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Panel</div>
+                        <div class="tl-title">Panel Reflection / Discussion</div>
+                        <div class="tl-by">Host &amp; All Speakers</div>
+                    </div>
+                </div>
+                <div class="tl-item main">
+                    <div class="tl-time">3:35 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Interactive</div>
+                        <div class="tl-title">Audience Engagement Segment</div>
+                        <div class="tl-by">Host</div>
+                    </div>
+                </div>
+                <div class="tl-item main">
+                    <div class="tl-time">3:45 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Sponsors</div>
+                        <div class="tl-title">Sponsor Recognition &amp; Raffle</div>
+                        <div class="tl-by">Host &amp; Sponsor Rep</div>
+                    </div>
+                </div>
+                <div class="tl-item main">
+                    <div class="tl-time">3:55 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Partners</div>
+                        <div class="tl-title">Partner Recognition</div>
+                        <div class="tl-by">Partnership Rep &amp; Host</div>
+                    </div>
+                </div>
+                <div class="tl-item closing">
+                    <div class="tl-time">4:05 PM</div>
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-tag">Closing</div>
+                        <div class="tl-title">The GiveHER Effect — Call to Action</div>
+                        <div class="tl-by">Ariel Lecias</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUTE GUIDE -->
+    <section class="section commute-section" id="commute">
+        <div class="container">
+            <div class="section-label">Getting There</div>
+            <h2 class="section-title">Commute Guide to Whitecloak (WCHQ)</h2>
+            <p class="commute-address">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>                20th Floor, Strata 2000, F. Ortigas Jr. Rd., San Antonio, Pasig City
+            </p>
+
+            <div class="commute-grid">
+                <div class="commute-card">
+                    <div class="commute-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="16" rx="2"/><path d="M4 10h16"/><path d="M12 2v8"/><circle cx="8.5" cy="14.5" r=".5" fill="currentColor"/><circle cx="15.5" cy="14.5" r=".5" fill="currentColor"/><path d="M9 20l-2 2"/><path d="M15 20l2 2"/><line x1="10" y1="20" x2="14" y2="20"/></svg>
+                    </div>
+                    <h3>Option 1: MRT-3</h3>
+                    <ul>
+                        <li>Ride MRT Line 3</li>
+                        <li>Drop-off: <strong>Ortigas Station</strong></li>
+                        <li>Walk: SM Megamall → Emerald Ave → F. Ortigas Jr. Rd.</li>
+                    </ul>
+                    <div class="sample-route">
+                        <span>Sample:</span> North Ave / Cubao → Ortigas Station → Walk to Strata 2000
+                    </div>
+                </div>
+
+                <div class="commute-card">
+                    <div class="commute-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11V18a1 1 0 0 0 1 1h1m13 0h1a1 1 0 0 0 1-1V11"/><path d="M3 11V7a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v4"/><path d="M3 11h18"/><circle cx="7.5" cy="19.5" r="1.5"/><circle cx="16.5" cy="19.5" r="1.5"/></svg>
+                    </div>
+                    <h3>Option 2: EDSA Carousel</h3>
+                    <ul>
+                        <li>Ride EDSA Carousel</li>
+                        <li>Drop-off: <strong>Ortigas Bus Stop</strong></li>
+                        <li>Walk toward Robinsons Galleria / Megamall → then to Strata 2000</li>
+                    </ul>
+                    <div class="sample-route">
+                        <span>Sample:</span> Monumento / PITX → Ortigas Bus Stop → Walk to Strata 2000
+                    </div>
+                </div>
+
+                <div class="commute-card">
+                    <div class="commute-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v9a2 2 0 0 1-2 2h-2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="14.5" cy="17.5" r="2.5"/></svg>
+                    </div>
+                    <h3>Option 3: UV Express / Jeepney</h3>
+                    <ul>
+                        <li>Ride UV/jeep going to: Ortigas Center, Megamall, or Robinsons Galleria</li>
+                        <li>Drop-off: SM Megamall or Robinsons Galleria</li>
+                        <li>Walk or take a short ride to Strata 2000</li>
+                    </ul>
+                    <div class="sample-route">
+                        <span>Sample:</span> Antipolo → Megamall → Walk to Strata 2000 &nbsp;|&nbsp; Pasig Palengke → Ortigas → Walk/ride
+                    </div>
+                </div>
+
+                <div class="commute-card">
+                    <div class="commute-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2.5-5H18.5L21 12v5h-2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/><polyline points="5 12 19 12"/></svg>
+                    </div>
+                    <h3>Option 4: Grab / Taxi</h3>
+                    <ul>
+                        <li>Book via Grab app</li>
+                        <li>Pin: <strong>"Strata 2000, F. Ortigas Jr. Rd., Pasig"</strong></li>
+                        <li>or search <strong>"Whitecloak WCHQ"</strong></li>
+                    </ul>
+                    <div class="sample-route">
+                        <span>Sample:</span> From home / condo / school → Direct to Strata 2000
+                    </div>
+                </div>
+            </div>
+
+            <div class="commute-tips">
+                <div class="tip-landmark">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>                        Final Landmark
+                    </h4>
+                    <p><strong>Building:</strong> Strata 2000</p>
+                    <p><strong>Nearest:</strong> SM Megamall &amp; Robinsons Galleria</p>
+                    <p><strong>Go to:</strong> 20th Floor – Whitecloak (WCHQ)</p>
+                </div>
+                <div class="tip-extras">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>                        Extra Tips
+                    </h4>
+                    <ul>
+                        <li>Leave early to avoid heavy traffic in Ortigas</li>
+                        <li>Use Google Maps / Waze — search <strong>"Whitecloak WCHQ"</strong></li>
+                        <li>Ask guards for <strong>Strata 2000</strong> if unsure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <div class="map-wrap">
+                <iframe title="White Cloak Technologies Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.158!2d121.064!3d14.587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9ea27294521%3A0x7eeade0c5cd6b7fe!2sWhite+Cloak+Technologies%2C+Inc.%2C+Strata+2000%2C+F.+Ortigas+Jr.+Rd%2C+Ortigas+Center%2C+Pasig!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph"
+                    width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+                <a href="https://www.google.com/maps/dir//White+Cloak+Technologies+,+Inc.,+Strata+2000,+F.+Ortigas+Jr.+Rd,+Ortigas+Center,+Pasig" target="_blank" class="map-directions-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>                    Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTER -->
+    <section class="section register-section" id="register">
+        <div class="container">
+            <div class="register-inner">
+                <div class="reg-text">
+                    <div class="section-label light">Join Us</div>
+                    <h2>Ready to be part of the GiveHER Effect?</h2>
+                    <p>Register now and secure your spot at one of Metro Manila's most empowering tech events for women. Seats are limited — don't miss out!</p>
+                    <ul class="reg-perks">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>                            Free to attend
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>                            Talks from industry leaders
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>                            Networking &amp; mentorship opportunities
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>                            Raffle prizes
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>                            Snacks &amp; refreshments
+                        </li>
+                    </ul>
+                </div>
+                <div class="reg-cta-box">
+                    <div class="reg-event-name">The GiveHER Effect</div>
+                    <div class="reg-event-sub">Powering the Future of AI and Robotics</div>
+                    <div class="reg-details">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>                            White Cloak, 20F Strata 2000, Ortigas
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>                            1:00 PM – 4:15 PM
+                        </div>
+                    </div>
+                    <a href="https://luma.com/42p2zhkb" target="_blank" class="btn-primary btn-large">
+            Register on Luma
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+                    <p class="reg-note">You'll be redirected to our official Luma registration page.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQS -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-label">Questions</div>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">1</span>
+                        <h3>What is The GiveHER Effect: Powering the Future of AI and Robotics?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>This event is a gathering that celebrates and empowers women in AI and robotics. It focuses on mentorship, innovation, and inclusive leadership while promoting a "Give to Gain" mindset—encouraging participants to support and uplift
+                            one another.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">2</span>
+                        <h3>Who can attend the event?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The event is open to:</p>
+                        <ul>
+                            <li>Students in AI, IT, Engineering, and related fields</li>
+                            <li>Young professionals in tech</li>
+                            <li>Women in technology communities</li>
+                            <li>Industry experts and mentors</li>
+                            <li>Partner organizations and invited guests</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">3</span>
+                        <h3>Do I have to be a woman to join?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. While the event centers on empowering women, it welcomes all individuals who support inclusivity and are interested in AI, robotics, and mentorship.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">4</span>
+                        <h3>What can participants expect from the event?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Participants can look forward to:</p>
+                        <ul>
+                            <li>Inspiring talks from women leaders in AI and robotics</li>
+                            <li>Mentorship and networking opportunities</li>
+                            <li>Knowledge-sharing sessions</li>
+                            <li>Discussions on career growth and leadership in tech</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">5</span>
+                        <h3>Where will the event be held?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The event will take place at:</p>
+                        <p><strong>White Cloak</strong><br>20th Floor, Strata 2000, F. Ortigas Jr. Rd, San Antonio, Pasig, Metro Manila</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">6</span>
+                        <h3>Is there a registration fee?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The event is completely free, but registration is required as slots may be limited.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">7</span>
+                        <h3>Will food be provided?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Light snacks and refreshments will be provided for attendees. Full meals will not be served.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">8</span>
+                        <h3>How can I register?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Participants can register through the official event registration link (to be provided by organizers). Early registration is recommended.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">9</span>
+                        <h3>Will there be networking opportunities?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. The event is designed to foster meaningful connections among attendees, mentors, and industry professionals.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">10</span>
+                        <h3>Can organizations partner or sponsor the event?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Organizations interested in partnerships or sponsorships may contact the event organizers for collaboration opportunities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">11</span>
+                        <h3>What should I bring to the event?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Valid ID (if required)</li>
+                            <li>Notebook or device for taking notes</li>
+                            <li>Business cards (optional, for networking)</li>
+                            <li>An open mindset ready to learn and connect</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-number">12</span>
+                        <h3>Will certificates be provided?</h3>
+                        <svg class="faq-toggle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Certificates of participation may be given to attendees after the event.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section class="section sponsors-section" id="sponsors">
+        <div class="container">
+            <div class="section-label">Our Sponsors</div>
+            <h2 class="section-title">Thank You to Our Sponsors</h2>
+
+            <div class="sponsors-tier">
+                <h3 class="sponsor-tier-title">Platinum Sponsors</h3>
+                <div class="sponsors-grid tier-platinum">
+                    <div class="sponsor-item">
+                        <div class="sponsor-logo">
+                            <img src="public/github.webp" alt="GitHub" class="sponsor-img">
+                        </div>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="sponsor-item">
+                        <div class="sponsor-logo">
+                            <img src="public/sui.png" alt="SUI" class="sponsor-img">
+                        </div>
+                        <span>SUI</span>
+                    </div>
+                    <div class="sponsor-item">
+                        <div class="sponsor-logo">
+                            <img src="public/aba.png" alt="ABA" class="sponsor-img">
+                        </div>
+                        <span>ABA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors-tier">
+                <h3 class="sponsor-tier-title">Gold Sponsors</h3>
+                <div class="sponsors-grid tier-gold">
+                    <div class="sponsor-item">
+                        <div class="sponsor-logo">
+                            <img src="public/devcon.png" alt="DEVCON PH" class="sponsor-img">
+                        </div>
+                        <span>DEVCON PH</span>
+                    </div>
+                    <div class="sponsor-item">
+                        <div class="sponsor-logo">
+                            <img src="public/alibaba.webp" alt="Alibaba Cloud" class="sponsor-img">
+                        </div>
+                        <span>Alibaba Cloud</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="section partners-section" id="partners">
+        <div class="container">
+            <div class="section-label">Thanks to</div>
+            <h2 class="section-title">Our Partner Organizations</h2>
+
+            <div class="partners-tier">
+                <h3 class="tier-title">In Collaboration With</h3>
+                <div class="partners-grid tier-collab">
+                    <div class="partner-item">
+                        <div class="partner-logo">
+                            <img src="public/azure.png" alt="Microsoft Azure Philippines" class="partner-img">
+                        </div>
+                        <span>Microsoft Azure Philippines</span>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-logo">
+                            <img src="public/enov.png" alt="AWS User Group e:Novators Philippines" class="partner-img">
+                        </div>
+                        <span>AWS User Group e:Novators Philippines</span>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-logo">
+                            <img src="public/ark.png" alt="ARK - AcademiTech Research and Knowledge" class="partner-img">
+                        </div>
+                        <span>ARK - AcademiTech Research and Knowledge</span>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-logo">
+                            <img src="public/Devkada.png" alt="DevKada" class="partner-img">
+                        </div>
+                        <span>DevKada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="partners-tier">
+                <h3 class="tier-title">Brought to You By</h3>
+                <div class="partners-grid tier-bought">
+                    <div class="partner-item">
+                        <div class="partner-logo">
+                            <img src="public/dep.png" alt="Data Engineering Pilipinas" class="partner-img">
+                        </div>
+                        <span>Data Engineering Pilipinas</span>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-logo">
+                            <img src="public/updss.png" alt="UP Data Science Society" class="partner-img">
+                        </div>
+                        <span>UP Data Science Society</span>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-logo">
+                            <img src="public/acomss.png" alt="Adamson Computer Science Society (ACOMSS)" class="partner-img">
+                        </div>
+                        <span>Adamson Computer Science Society (ACOMSS)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="footer-logo">She is <strong>DEVCON</strong> Manila</div>
+                    <p>Empowering women in emerging technologies through mentorship, innovation, and inclusive leadership.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#speakers">Speakers</a>
+                    <a href="#program">Program</a>
+                    <a href="#commute">How to Get There</a>
+                    <a href="#faq">FAQs</a>
+                    <a href="#sponsors">Sponsors</a>
+                    <a href="#partners">Partners</a>
+                    <a href="https://luma.com/42p2zhkb" target="_blank">Register</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 The GiveHER Effect · She is DEVCON × DEVCON Manila · All rights reserved.</p>
+                <p class="footer-give">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="fill: #fff;"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>                    Give to Gain
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
