@@ -121,7 +121,14 @@ img {
     display: flex;
     align-items: center;
     gap: 24px;
-    position: relative;
+}
+
+/* Center nav links adjusted back to original layout */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
 }
 
 .nav-brand {
@@ -193,6 +200,7 @@ img {
     cursor: default;
     user-select: none;
     position: relative;
+    margin-right: 32px;
 }
 
 .logo-img {
@@ -219,8 +227,9 @@ img {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     margin-left: auto;
+    margin-right: 80px;
 }
 
 .nav-links a {
@@ -230,6 +239,20 @@ img {
     border-radius: 999px;
     color: var(--text-muted);
     transition: color var(--transition), background var(--transition);
+}
+
+/* Smaller nav item for longer "How to Get There" text */
+.nav-commute {
+    font-size: 0.75rem !important;
+    padding: 6px 10px !important;
+}
+
+/* Theme toggle inline with nav links */
+.nav-links .theme-toggle {
+    margin-left: 4px;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
 }
 
 .nav-links a:hover {
@@ -1693,10 +1716,13 @@ body.loaded {
         box-shadow: 0 8px 32px var(--shadow);
         z-index: 999;
     }
-    .nav-links.open a {
+    .nav-links.open a,
+    .nav-links .theme-toggle {
         display: block;
+        width: 100%;
         padding: 10px 16px;
         border-radius: var(--radius-sm);
+        text-align: center;
     }
     .hamburger {
         display: flex;
@@ -1810,43 +1836,35 @@ body.loaded {
     .footer-bottom p {
         font-size: 0.8rem;
     }
-
-    /* Center nav links on mobile (hamburger open) */
-    .nav-links.open {
-        align-items: center;
-    }
 }
 
 /* ---------- Light Mode Navbar Styling ---------- */
 
 [data-theme="light"] .navbar {
-    background: var(--pink);
+    background: linear-gradient(90deg, var(--pink-dark) 0%, var(--pink-light) 50%, var(--pink-dark) 100%);
     border-bottom-color: rgba(233, 30, 140, 0.25);
 }
 
+/* Light mode navbar text - make brand and nav links visible */
+[data-theme="light"] .nav-brand,
 [data-theme="light"] .nav-brand .brand-she,
-[data-theme="light"] .nav-brand .brand-manila,
-[data-theme="light"] .nav-links a,
-[data-theme="light"] .nav-right {
-    color: #fff;
-}
-
-[data-theme="light"] .brand-devcon {
+[data-theme="light"] .nav-brand .brand-devcon,
+[data-theme="light"] .nav-brand .brand-manila {
     color: #fff;
 }
 
 [data-theme="light"] .nav-links a {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
 }
 
 [data-theme="light"] .nav-links a:hover {
     color: #fff;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 [data-theme="light"] .nav-cta {
     background: #fff !important;
-    color: var(--pink) !important;
+    color: var(--pink-dark) !important;
 }
 
 [data-theme="light"] .nav-cta:hover {
@@ -1854,18 +1872,19 @@ body.loaded {
 }
 
 [data-theme="light"] .theme-toggle {
-    border-color: rgba(255, 255, 255, 0.4);
-    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
 }
 
 [data-theme="light"] .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.3);
     border-color: #fff;
 }
 
+/* Mobile hamburger light mode reset */
 [data-theme="light"] .hamburger span {
-    background: #fff;
+    background: var(--text);
 }
 
 /* Ensure logo image is visible on pink background */
