@@ -1908,6 +1908,11 @@ body.loaded {
     height: 160px;
 }
 
+/* Venue logo - dark mode fix */
+[data-theme="dark"] .tier-venue .sponsor-logo img {
+    filter: brightness(0) invert(1);
+}
+
 .tier-gold .sponsor-item span {
     font-weight: 600;
 }
