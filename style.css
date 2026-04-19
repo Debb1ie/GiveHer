@@ -1902,6 +1902,12 @@ body.loaded {
     height: 120px;
 }
 
+/* Venue Sponsors - Smaller */
+.tier-venue .sponsor-logo {
+    width: 100px;
+    height: 100px;
+}
+
 .tier-gold .sponsor-item span {
     font-weight: 600;
 }
