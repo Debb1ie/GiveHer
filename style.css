@@ -1913,6 +1913,16 @@ body.loaded {
     filter: brightness(0) invert(1);
 }
 
+/* Navbar logos - dark mode */
+[data-theme="dark"] .logo-img {
+    filter: brightness(0) invert(1);
+}
+
+/* DEVCON PH sponsor logo - dark mode */
+[data-theme="dark"] .tier-gold .sponsor-logo:first-child img {
+    filter: brightness(0) invert(1);
+}
+
 .tier-gold .sponsor-item span {
     font-weight: 600;
 }
