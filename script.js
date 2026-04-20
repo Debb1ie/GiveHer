@@ -264,5 +264,78 @@
         });
     });
 
+    // ── Lightbox Gallery ───────────────────────────────────────
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    let currentImageIndex = 0;
+    let allImages = [];
+
+    function collectAllImages() {
+        allImages = [];
+        document.querySelectorAll('.highlight-card').forEach((card, index) => {
+            const img = card.querySelector('.highlight-img');
+            if (img) {
+                allImages.push({
+                    src: img.src,
+                    alt: img.alt,
+                    element: card
+                });
+            }
+        });
+    }
+
+    function openLightbox(card) {
+        collectAllImages();
+        const img = card.querySelector('.highlight-img');
+        if (!img) return;
+        
+        currentImageIndex = allImages.findIndex(imgData => imgData.element === card);
+        updateLightboxImage();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(event) {
+        if (event && event.target !== lightbox && event.target.classList.contains('lightbox')) {
+            return;
+        }
+        if (event && event.target.closest('.lightbox-nav')) {
+            return;
+        }
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function updateLightboxImage() {
+        if (allImages[currentImageIndex]) {
+            lightboxImg.src = allImages[currentImageIndex].src;
+            lightboxCaption.textContent = allImages[currentImageIndex].alt;
+        }
+    }
+
+    function navigateLightbox(direction) {
+        currentImageIndex += direction;
+        if (currentImageIndex < 0) {
+            currentImageIndex = allImages.length - 1;
+        } else if (currentImageIndex >= allImages.length) {
+            currentImageIndex = 0;
+        }
+        updateLightboxImage();
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        
+        if (e.key === 'Escape') {
+            closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+            navigateLightbox(-1);
+        } else if (e.key === 'ArrowRight') {
+            navigateLightbox(1);
+        }
+    });
+
     console.log('💗 The GiveHER Effect · She is DEVCON × DEVCON Manila');
 })();

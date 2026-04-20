@@ -146,34 +146,40 @@
             <h2 class="section-title">DEVCON Manila Highlights</h2>
             <p class="highlights-subtitle">Relive the energy, insights, and connections from our previous events.</p>
 
-            <div class="highlights-grid">
-                <div class="highlight-card">
-                    <div class="highlight-img-wrap">
-                        <img src="public/devcon1.jpg" alt="DEVCON Manila Past Event" class="highlight-img">
+            <!-- DEVCON Manila Highlights -->
+            <div class="highlights-segment">
+                <h3 class="segment-title">DEVCON Manila Highlights</h3>
+                <p class="segment-desc">Capturing key moments, connections, and experiences from the DEVCON Manila community.</p>
+                <div class="highlights-grid">
+                    <div class="highlight-card" onclick="openLightbox(this)">
+                        <div class="highlight-img-wrap">
+                            <img src="public/devcon1.jpg" alt="DEVCON Manila Past Event" class="highlight-img">
+                        </div>
                     </div>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-img-wrap">
-                        <img src="public/devcon2.jpg" alt="DEVCON Manila Past Event" class="highlight-img">
+                    <div class="highlight-card" onclick="openLightbox(this)">
+                        <div class="highlight-img-wrap">
+                            <img src="public/devcon2.jpg" alt="DEVCON Manila Past Event" class="highlight-img">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Building The Engineering Talent for AI -->
-            <div class="highlights-section" style="margin-top: 48px;">
-                <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 8px;">Building The Engineering Talent for AI</h3>
-                <div class="highlights-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-                    <div class="highlight-card">
+            <div class="highlights-segment">
+                <h3 class="segment-title">Building The Engineering Talent for AI</h3>
+                <p class="segment-desc">Showcasing how developers and leaders are shaping the future of AI through learning, collaboration, and innovation.</p>
+                <div class="highlights-grid">
+                    <div class="highlight-card" onclick="openLightbox(this)">
                         <div class="highlight-img-wrap">
                             <img src="public/she.jpg" alt="SHE Initiative" class="highlight-img">
                         </div>
                     </div>
-                    <div class="highlight-card">
+                    <div class="highlight-card" onclick="openLightbox(this)">
                         <div class="highlight-img-wrap">
                             <img src="public/she1.jpg" alt="SHE Initiative" class="highlight-img">
                         </div>
                     </div>
-                    <div class="highlight-card">
+                    <div class="highlight-card" onclick="openLightbox(this)">
                         <div class="highlight-img-wrap">
                             <img src="public/she2.jpg" alt="SHE Initiative" class="highlight-img">
                         </div>
@@ -182,20 +188,21 @@
             </div>
 
             <!-- DEVCON Kids Highlight -->
-            <div class="highlights-section" style="margin-top: 48px;">
-                <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 8px;">DEVCON Kids Highlight (Women Leading Robotics)</h3>
-                <div class="highlights-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-                    <div class="highlight-card">
+            <div class="highlights-segment">
+                <h3 class="segment-title">DEVCON Kids Highlight (Women Leading Robotics)</h3>
+                <p class="segment-desc">Featuring inspiring stories of women empowering the next generation through robotics, creativity, and tech education.</p>
+                <div class="highlights-grid">
+                    <div class="highlight-card" onclick="openLightbox(this)">
                         <div class="highlight-img-wrap">
                             <img src="public/devkids.jpg" alt="DEVCON Kids" class="highlight-img">
                         </div>
                     </div>
-                    <div class="highlight-card">
+                    <div class="highlight-card" onclick="openLightbox(this)">
                         <div class="highlight-img-wrap">
                             <img src="public/devkids3.jpg" alt="DEVCON Kids" class="highlight-img">
                         </div>
                     </div>
-                    <div class="highlight-card">
+                    <div class="highlight-card" onclick="openLightbox(this)">
                         <div class="highlight-img-wrap">
                             <img src="public/devkids2.jpg" alt="DEVCON Kids" class="highlight-img">
                         </div>
@@ -204,6 +211,15 @@
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#10094;</button>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#10095;</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Full size image">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
 
     <!-- SPEAKERS -->
     <section class="section speakers-section" id="speakers">
