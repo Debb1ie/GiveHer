@@ -124,7 +124,9 @@ img {
     gap: 24px;
 }
 
+
 /* Left side: brand text + logo + nav links together */
+
 .nav-left {
     display: flex;
     align-items: center;
@@ -171,7 +173,9 @@ img {
     position: relative;
 }
 
+
 /* Nav links positioned to the right of logo */
+
 .nav-left .nav-links {
     display: flex;
     align-items: center;
@@ -188,7 +192,9 @@ img {
     transition: color var(--transition), background var(--transition);
 }
 
+
 /* Smaller nav item for longer "How to Get There" text */
+
 .nav-commute {
     font-size: 0.75rem !important;
     padding: 6px 10px !important;
@@ -261,7 +267,9 @@ img {
     position: relative;
 }
 
+
 /* Nav links positioned to the right of the brand (still on left side of navbar) */
+
 .nav-left .nav-links {
     display: flex;
     align-items: center;
@@ -278,7 +286,9 @@ img {
     transition: color var(--transition), background var(--transition);
 }
 
+
 /* Smaller nav item for longer "How to Get There" text */
+
 .nav-commute {
     font-size: 0.75rem !important;
     padding: 6px 10px !important;
@@ -303,7 +313,8 @@ img {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    /* tighter gap so toggle hugs Register */
     margin-left: auto;
 }
 
@@ -628,7 +639,9 @@ img {
     animation-delay: 2.6s;
 }
 
+
 /* Hero Particle Animation */
+
 .hero-particles {
     position: absolute;
     top: 0;
@@ -649,7 +662,8 @@ img {
 }
 
 @keyframes particleFloat {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0) translateX(0);
         opacity: 0.3;
     }
@@ -667,7 +681,9 @@ img {
     }
 }
 
+
 /* Scroll Reveal Animation */
+
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -679,7 +695,9 @@ img {
     transform: translateY(0);
 }
 
+
 /* Title Animation */
+
 .title-animate {
     animation: titleReveal 1s ease-out forwards;
 }
@@ -695,14 +713,18 @@ img {
     }
 }
 
+
 /* Tilt Card Effect */
+
 .speaker-card,
 .commute-card {
     transform-style: preserve-3d;
     transition: transform 0.3s ease;
 }
 
+
 /* Timeline Item Animation */
+
 .tl-item {
     opacity: 0;
     transform: translateX(-20px);
@@ -714,7 +736,9 @@ img {
     transform: translateX(0);
 }
 
+
 /* Button Ripple */
+
 .btn-primary {
     position: relative;
     overflow: hidden;
@@ -736,12 +760,16 @@ img {
     }
 }
 
+
 /* Body Loaded State */
+
 body.loaded {
     overflow-x: hidden;
 }
 
+
 /* Loader */
+
 .loader {
     position: fixed;
     top: 0;
@@ -763,8 +791,13 @@ body.loaded {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 
@@ -1497,11 +1530,11 @@ body.loaded {
     .highlights-grid {
         grid-template-columns: 1fr;
     }
-
     .highlight-img-wrap {
         aspect-ratio: 4 / 3;
     }
 }
+
 
 /* ---------- Footer ---------- */
 
@@ -1726,7 +1759,7 @@ body.loaded {
 }
 
 @media (max-width: 640px) {
-    :root {
+     :root {
         --nav-h: 70px;
     }
     .nav-links {
@@ -1867,6 +1900,7 @@ body.loaded {
     }
 }
 
+
 /* ---------- Scroll reveal animation ---------- */
 
 .reveal {
@@ -1879,6 +1913,7 @@ body.loaded {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 /* ---------- FAQ Section ---------- */
 
@@ -1990,11 +2025,13 @@ body.loaded {
     font-weight: 700;
 }
 
+
 /* ---------- Partners Section ---------- */
 
 .partners-section {
     background: var(--bg);
 }
+
 
 /* ---------- Sponsors Section ---------- */
 
@@ -2060,25 +2097,33 @@ body.loaded {
     text-align: center;
 }
 
+
 /* Platinum Sponsors - Larger */
+
 .tier-platinum .sponsor-logo {
     width: 160px;
     height: 160px;
 }
 
+
 /* Gold Sponsors - Slightly smaller */
+
 .tier-gold .sponsor-logo {
     width: 120px;
     height: 120px;
 }
 
+
 /* Venue Sponsors - Normal size */
+
 .tier-venue .sponsor-logo {
     width: 160px;
     height: 160px;
 }
 
+
 /* Venue logo - dark mode fix */
+
 [data-theme="dark"] .tier-venue .sponsor-logo img {
     filter: brightness(0) invert(1);
 }
@@ -2172,7 +2217,9 @@ body.loaded {
     background: transparent;
 }
 
+
 /* Partners Responsive */
+
 @media (max-width: 768px) {
     .partners-grid {
         gap: 16px;
