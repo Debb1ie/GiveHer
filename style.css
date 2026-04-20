@@ -1938,7 +1938,7 @@ body.loaded {
         grid-template-columns: 1fr;
     }
      .faq-question {
-         padding: 14px 16px;
+         padding: 16px;
      }
      .faq-question h3 {
          font-size: 0.85rem;
@@ -1947,7 +1947,7 @@ body.loaded {
          align-self: center; /* ensure vertical centering in multi-line titles */
      }
      .faq-answer {
-         padding: 0 16px 14px 48px;
+         padding: 16px;
      }
 
     /* Register section: optimize header and checklist for mobile/tablet */
@@ -2197,7 +2197,7 @@ body.loaded {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     cursor: pointer;
     transition: background var(--transition);
 }
@@ -2226,6 +2226,7 @@ body.loaded {
 /* Accordion: hide answers by default, show only when active */
 .faq-answer {
     display: none;
+    padding: 20px 24px;
 }
 .faq-item.active .faq-answer {
     display: block;
