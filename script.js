@@ -121,11 +121,9 @@
             if (entry.isIntersecting) {
                 const id = entry.target.id;
                 navAnchors.forEach(a => {
-                    a.style.color = '';
-                    a.style.background = '';
+                    a.classList.remove('active');
                     if (a.getAttribute('href') === `#${id}`) {
-                        a.style.color = 'var(--pink)';
-                        a.style.background = 'var(--pink-pale)';
+                        a.classList.add('active');
                     }
                 });
             }

@@ -261,7 +261,7 @@ img {
     position: relative;
 }
 
-/* Nav links positioned to the right of the brand (still on left side of navbar) */
+ /* Nav links positioned to the right of the brand (still on left side of navbar) */
 .nav-left .nav-links {
     display: flex;
     align-items: center;
@@ -278,10 +278,10 @@ img {
     transition: color var(--transition), background var(--transition);
 }
 
-/* Smaller nav item for longer "How to Get There" text */
+/* Smaller nav item for longer "How to Get There" text - now same base padding for alignment */
 .nav-commute {
-    font-size: 0.75rem !important;
-    padding: 6px 10px !important;
+    font-size: 0.88rem !important;
+    padding: 7px 14px !important;
 }
 
 .nav-cta {
@@ -298,6 +298,13 @@ img {
 .nav-links a:hover {
     color: var(--pink);
     background: var(--pink-pale);
+}
+
+/* Active nav link indicator */
+.nav-links a.active {
+    color: var(--pink);
+    background: var(--pink-pale);
+    font-weight: 700;
 }
 
 .nav-right {
@@ -1079,8 +1086,27 @@ body.loaded {
     font-weight: 800;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--pink);
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+/* Logistics-style tags: networking, opening, remarks, break, raffle, sponsor, partners, closing, wrap-up, activity */
+.tl-item.prep .tl-tag,
+.tl-item.main .tl-tag,
+.tl-item.break .tl-tag,
+.tl-item.closing .tl-tag {
+    background: var(--surface);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+
+/* Speaker/interactive session tags: talk (including Q&A, speaker slots, panel) */
+.tl-item.talk .tl-tag {
+    background: var(--pink);
+    color: #fff;
+    border: 1px solid var(--pink);
 }
 
 .tl-title {
@@ -1678,14 +1704,14 @@ body.loaded {
 /* ---------- Footer ---------- */
 
 .footer {
-    background: linear-gradient(135deg, var(--pink) 0%, #c2185b 100%);
+    background: linear-gradient(135deg, #be185d 0%, #c2185b 100%);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding: 60px 0 32px;
     color: #fff;
 }
 
 [data-theme="dark"] .footer {
-    background: linear-gradient(135deg, #e91e8c 0%, #ad1457 100%);
+    background: linear-gradient(135deg, #be185d 0%, #ad1457 100%);
 }
 
 .footer-inner {
@@ -1732,9 +1758,9 @@ body.loaded {
     padding-top: 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 32px;
     flex-wrap: wrap;
     font-size: 0.78rem;
     color: rgba(255, 255, 255, 0.8);
@@ -1759,12 +1785,21 @@ body.loaded {
 
     /* Program timeline: improve spacing and prevent text clipping */
     .tl-content {
-        padding: 16px 20px;
-        min-height: 70px;
+        padding: 12px 16px;
+        min-height: 60px;
     }
     .tl-item {
-        padding: 20px 0;
-        gap: 20px; /* increase spacing between time, dot, and content */
+        padding: 8px 0;
+        gap: 12px;
+    }
+    .tl-time {
+        font-size: 0.72rem;
+        padding-top: 12px;
+    }
+    .tl-dot {
+        width: 12px;
+        height: 12px;
+        margin-top: 12px;
     }
 
     /* Dark mode toggle: ensure 44x44px touch target */
@@ -2013,6 +2048,34 @@ body.loaded {
     .section-title {
         font-size: 1.5rem;
     }
+
+    /* Timeline mobile: minimize vertical spacing while keeping readability */
+    .tl-content {
+        padding: 10px 14px;
+        min-height: 55px;
+    }
+    .tl-item {
+        padding: 6px 0;
+        gap: 8px;
+    }
+    .tl-time {
+        font-size: 0.7rem;
+        padding-top: 8px;
+    }
+    .tl-dot {
+        width: 10px;
+        height: 10px;
+        margin-top: 8px;
+    }
+    .tl-tag {
+        font-size: 0.6rem;
+    }
+    .tl-title {
+        font-size: 0.85rem;
+    }
+    .tl-by {
+        font-size: 0.72rem;
+    }
     .about-text p {
         font-size: 0.9rem;
     }
@@ -2143,52 +2206,26 @@ body.loaded {
     background: var(--surface);
 }
 
+/* Hide FAQ numbering - not sequential, creates visual noise */
 .faq-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 26px;
-    height: 26px;
-    background: var(--pink-pale);
-    color: var(--pink);
-    font-weight: 800;
-    font-size: 0.75rem;
-    border-radius: 50%;
-    flex-shrink: 0;
+    display: none;
 }
 
-.faq-question h3 {
-    flex: 1;
-    font-size: 0.88rem;
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.4;
-}
-
+/* Ensure chevron always appears and is right-aligned */
 .faq-toggle {
     color: var(--pink);
     flex-shrink: 0;
     transition: transform var(--transition);
+    margin-left: auto; /* push to right edge */
 }
 
 .faq-item.active .faq-toggle {
     transform: rotate(180deg);
 }
 
-.faq-answer {
-    display: none;
-    padding: 0 20px 16px 58px;
-}
-
-.faq-item.active .faq-answer {
-    display: block;
-}
-
-.faq-answer p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.5;
-    margin-bottom: 10px;
+/* Ensure minimum tap target */
+.faq-question {
+    min-height: 44px;
 }
 
 .faq-answer ul {
