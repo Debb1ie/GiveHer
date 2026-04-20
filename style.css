@@ -59,9 +59,8 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--nav-h) + 16px);
+    scroll-padding-top: 90px;
     font-size: 16px;
-    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -72,8 +71,6 @@ body {
     transition: background var(--transition), color var(--transition);
     overflow-x: hidden;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -1745,7 +1742,7 @@ body.loaded {
 .footer-tagline {
     font-size: 0.88rem;
     color: rgba(255, 255, 255, 0.85);
-    line-height: 1.6;
+    line-height: 1.65;
     margin: 0;
     max-width: 500px;
 }
@@ -1781,20 +1778,43 @@ body.loaded {
     transform: translateY(0);
 }
 
-.footer-sponsor-cta {
-    max-width: 400px;
-    width: 100%;
+      .footer-sponsor-cta {
+          max-width: 340px;
+          width: 100%;
+      }
+  }
+
+/* ========== Mobile Touch Optimizations ========== */
+
+/* Ensure minimum touch target size */
+.footer-nav a,
+.sponsor-btn {
+  min-height: 44px;
+  min-width: 44px;
 }
 
-.footer-sponsor-cta {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: var(--radius);
-    padding: 28px 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+/* Slightly larger touch area on small screens */
+@media (max-width: 640px) {
+  .footer-nav a {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  
+  .footer-sponsor-cta {
+    padding: 24px 20px;
+  }
+  
+  .sponsor-btn {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Prevent zoom on input focus (iOS) */
+@media screen and (max-width: 1024px) {
+  input, textarea, select, button {
+    font-size: 16px;
+  }
 }
 
 .footer-sponsor-cta h4 {
@@ -1842,22 +1862,6 @@ body.loaded {
     width: 20px;
     height: 20px;
     flex-shrink: 0;
-}
-
-.footer-logo {
-    font-size: 1.2rem;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.footer-tagline {
-    font-size: 0.88rem;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.65;
-    margin: 0;
-    max-width: 500px;
 }
 
 .footer-bottom {
@@ -1990,23 +1994,12 @@ body.loaded {
      .footer-inner {
          gap: 32px;
      }
-     .footer-content {
-         gap: 16px;
-     }
      .footer-nav {
-         gap: 6px 10px;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 12px 16px;
      }
-     .footer-nav a {
-         font-size: 0.8rem;
-         padding: 6px 12px;
-     }
-     .footer-sponsor-cta {
-         max-width: 340px;
-     }
- }
-      .footer-sponsor-cta {
-          max-width: 340px;
-      }
  }
 
 @media (max-width: 768px) {
@@ -2068,46 +2061,7 @@ body.loaded {
      }
 .faq-answer {
           padding: 16px;
- }
-
-/* ========== UI Enhancements ========== */
-
-/* Navbar link spacing – overrides earlier rules for final consistency */
-.nav-left .nav-links {
-    gap: 12px !important;
-    margin-left: 12px !important;
-}
-.nav-left .nav-links a:not(.nav-cta):not(.nav-commute) {
-    padding: 6px 12px !important;
-    font-size: 0.85rem !important;
-}
-
-/* Navbar brand logo spacing on small screens */
-@media (max-width: 768px) {
-    .nav-left .nav-links {
-        margin-left: 0;
-        gap: 8px;
-    }
-}
-
-/* Sponsor button – enhanced with subtle shadow and hover lift */
-.sponsor-btn {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-.sponsor-btn:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer CTA card – slight hover lift */
-.footer-sponsor-cta {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.footer-sponsor-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
+      }
     .timeline::before {
         left: 0;
     }
@@ -2159,13 +2113,13 @@ body.loaded {
         max-height: calc(100vh - var(--nav-h));
         overflow-y: auto;
     }
-     #navLinks.open a {
-         display: block;
-         width: 100%;
-         padding: 10px 16px;
-         border-radius: var(--radius-sm);
-         text-align: left;
-     }
+    #navLinks.open a {
+        display: block;
+        width: 100%;
+        padding: 10px 16px;
+        border-radius: var(--radius-sm);
+        text-align: center;
+    }
     .hamburger {
         display: flex;
         min-width: 44px;
@@ -2306,9 +2260,9 @@ body.loaded {
     .footer {
         padding: 40px 0 20px;
     }
-    .footer-logo {
-        font-size: 1.1rem;
-    }
+     .footer-logo {
+         font-size: 1.1rem;
+     }
      .footer-nav {
          gap: 6px 12px;
      }
@@ -2316,7 +2270,7 @@ body.loaded {
          font-size: 0.8rem;
          padding: 6px 12px;
      }
-    .footer-bottom {
+     .footer-bottom {
         flex-direction: column;
         gap: 12px;
         text-align: center;
@@ -2632,253 +2586,23 @@ body.loaded {
     }
 }
 
-/* Mobile & Tablet FAQ: single-column accordion */
-@media (max-width: 1024px) {
-    .faq-grid {
-        grid-template-columns: 1fr;
-    }
+ /* Mobile & Tablet FAQ: single-column accordion */
+ @media (max-width: 1024px) {
+     .faq-grid {
+         grid-template-columns: 1fr;
+     }
 
      /* Footer: center all content */
      .footer-inner {
-         gap: 28px;
+         gap: 32px;
+         text-align: center;
      }
      .footer-content {
-         gap: 14px;
-     }
-     .footer-logo {
-         font-size: 1.1rem;
-     }
-     .footer-tagline {
-         font-size: 0.8rem;
-     }
-     .footer-nav {
-         gap: 6px 10px;
-     }
-     .footer-nav a {
-         font-size: 0.75rem;
-         padding: 5px 10px;
+         order: 1;
      }
      .footer-sponsor-cta {
-         max-width: 300px;
+         order: 2;
+         max-width: 340px;
+         width: 100%;
      }
-     .footer-sponsor-cta h4 {
-         font-size: 1rem;
-     }
-     .footer-sponsor-cta p {
-         font-size: 0.8rem;
-     }
-      .footer-sponsor-cta a {
-          font-size: 0.85rem;
-          padding: 12px 20px;
-      }
-}
-
-/* ========== Mobile & Tablet Optimizations ========== */
-
-/* Ensure minimum touch target sizes (44x44px) */
-.navbar,
-.nav-links a,
-.theme-toggle,
-.hamburger,
-.footer-nav a,
-.sponsor-btn,
-.btn-primary,
-.faq-question,
-.speaker-card,
-.commute-card,
-.highlight-card,
-.tl-content {
-    min-height: 44px;
-    min-width: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Ensure nav links have adequate touch area */
-.nav-links a:not(.nav-cta) {
-    min-height: 44px;
-}
-
-/* Improved tap highlighting on mobile */
-button,
-a {
-    -webkit-tap-highlight-color: rgba(233, 30, 140, 0.15);
-    tap-highlight-color: rgba(233, 30, 140, 0.15);
-}
-
-/* Smooth touch scrolling */
-@media (max-width: 1024px) {
-    html {
-        scroll-padding-top: calc(var(--nav-h) + 12px);
-    }
-    
-    /* Improve touch targets in nav */
-    .nav-links a {
-        padding: 10px 14px !important;
-    }
-    
-    .hamburger {
-        min-width: 48px;
-        min-height: 48px;
-    }
-    
-    /* Better spacing for mobile menu */
-    #navLinks.open {
-        padding: 20px 24px 28px;
-        gap: 12px;
-    }
-    
-    #navLinks.open a {
-        padding: 14px 18px;
-        font-size: 1rem;
-        border-radius: 12px;
-    }
-}
-
-/* Small mobile devices (iPhone SE, etc.) */
-@media (max-width: 375px) {
-    :root {
-        --nav-h: 65px;
-    }
-    
-    .container {
-        padding: 0 16px;
-    }
-    
-    .hero {
-        padding: calc(var(--nav-h) + 24px) 16px 48px;
-        gap: 32px;
-    }
-    
-    .hero-title-img {
-        max-width: 260px;
-    }
-    
-    .hero-meta {
-        gap: 16px;
-    }
-    
-    .meta-item {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .hero-btn {
-        padding: 14px 28px;
-        font-size: 0.95rem;
-    }
-    
-    .section {
-        padding: 48px 0;
-    }
-    
-    .section-title {
-        font-size: 1.6rem;
-    }
-    
-    .footer-nav {
-        gap: 6px 8px;
-    }
-    
-    .footer-nav a {
-        padding: 6px 10px;
-        font-size: 0.75rem;
-    }
-    
-    .footer-logo {
-        font-size: 1.1rem;
-    }
-    
-    .footer-tagline {
-        font-size: 0.8rem;
-    }
-}
-
-/* Medium tablets and large phones */
-@media (min-width: 376px) and (max-width: 768px) {
-    .hero-title-img {
-        max-width: 320px;
-    }
-    
-    .speakers-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .speaker-img-wrap {
-        height: 200px;
-    }
-    
-    .register-inner {
-        gap: 32px;
-    }
-    
-    .reg-cta-box {
-        padding: 28px;
-    }
-}
-
-/* Large tablets and small desktops */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .hero-title-img {
-        max-width: 380px;
-    }
-    
-    .speakers-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .speaker-img-wrap {
-        height: 240px;
-    }
-}
-
-/* Prevent text size adjustment on orientation change */
-@media screen and (orientation: landscape) {
-    .hero-title-img {
-        max-width: 400px;
-    }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .footer-nav a {
-        border-width: 2px;
-    }
-    
-    .sponsor-btn {
-        border: 2px solid var(--pink-dark);
-    }
-}
-
-/* Reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-    
-    .floating {
-        animation: none !important;
-    }
-}
-
-/* Ensure proper viewport on mobile Safari */
-@supports (-webkit-touch-callout: none) {
-    .hero {
-        min-height: -webkit-fill-available;
-    }
-}
-
-/* Dark mode automatic preference */
-@media (prefers-color-scheme: dark) {
-    /* Handled by JS toggle, but provides fallback */
-    :root {
-        color-scheme: light dark;
-    }
-}
-
+ }
