@@ -1878,14 +1878,19 @@ body.loaded {
     .tl-item {
         grid-template-columns: 82px 20px 1fr;
     }
+    .tl-content {
+        padding: 16px;
+    }
     .footer-inner {
         flex-direction: column;
         text-align: center;
         gap: 32px;
     }
     .footer-links {
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 12px 16px;
     }
 }
 
@@ -1938,7 +1943,7 @@ body.loaded {
         grid-template-columns: 1fr;
     }
      .faq-question {
-         padding: 14px 16px;
+         padding: 16px;
      }
      .faq-question h3 {
          font-size: 0.85rem;
@@ -1946,9 +1951,18 @@ body.loaded {
      .faq-toggle {
          align-self: center; /* ensure vertical centering in multi-line titles */
      }
-     .faq-answer {
-         padding: 0 16px 14px 48px;
-     }
+.faq-answer {
+          padding: 16px;
+      }
+    .timeline::before {
+        left: 0;
+    }
+    .tl-item {
+        grid-template-columns: 70px 1fr;
+    }
+    .tl-content {
+        padding: 16px;
+    }
 
     /* Register section: optimize header and checklist for mobile/tablet */
     .reg-text h2 {
@@ -2042,6 +2056,9 @@ body.loaded {
     .section {
         padding: 56px 0;
     }
+    .container {
+        padding: 0 20px;
+    }
     .section-label {
         font-size: 0.7rem;
     }
@@ -2105,7 +2122,7 @@ body.loaded {
         display: none;
     }
     .tl-content {
-        padding-left: 0;
+        padding: 16px;
     }
     .tl-tag {
         font-size: 0.7rem;
@@ -2197,7 +2214,7 @@ body.loaded {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 16px 20px;
+    padding: 20px 24px;
     cursor: pointer;
     transition: background var(--transition);
 }
@@ -2226,6 +2243,7 @@ body.loaded {
 /* Accordion: hide answers by default, show only when active */
 .faq-answer {
     display: none;
+    padding: 20px 24px;
 }
 .faq-item.active .faq-answer {
     display: block;
