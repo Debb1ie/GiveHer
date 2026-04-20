@@ -1901,10 +1901,10 @@ body.loaded {
     :root {
         --nav-h: 70px;
     }
-    .nav-links {
+    #navLinks {
         display: none;
     }
-    .nav-links.open {
+    #navLinks.open {
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -1917,8 +1917,10 @@ body.loaded {
         gap: 8px;
         box-shadow: 0 8px 32px var(--shadow);
         z-index: 999;
+        max-height: calc(100vh - var(--nav-h));
+        overflow-y: auto;
     }
-    .nav-links.open a {
+    #navLinks.open a {
         display: block;
         width: 100%;
         padding: 10px 16px;
@@ -1927,6 +1929,12 @@ body.loaded {
     }
     .hamburger {
         display: flex;
+    }
+    .logo-placeholder {
+        display: none;
+    }
+    .nav-left {
+        flex-shrink: 1;
     }
     .hero {
         padding: calc(var(--nav-h) + 24px) 16px 40px;
