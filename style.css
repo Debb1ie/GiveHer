@@ -1778,11 +1778,10 @@ body.loaded {
     transform: translateY(0);
 }
 
-      .footer-sponsor-cta {
-          max-width: 340px;
-          width: 100%;
-      }
-  }
+.footer-sponsor-cta {
+    max-width: 340px;
+    width: 100%;
+}
 
 /* ========== Mobile Touch Optimizations ========== */
 
