@@ -1072,7 +1072,7 @@ body.loaded {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    padding: 12px 18px;
+    padding: 16px;
     transition: border-color var(--transition), box-shadow var(--transition);
 }
 
@@ -1785,7 +1785,7 @@ body.loaded {
 
     /* Program timeline: improve spacing and prevent text clipping */
     .tl-content {
-        padding: 12px 16px;
+        padding: 16px;
         min-height: 60px;
     }
     .tl-item {
@@ -2051,7 +2051,7 @@ body.loaded {
 
     /* Timeline mobile: minimize vertical spacing while keeping readability */
     .tl-content {
-        padding: 10px 14px;
+        padding: 16px;
         min-height: 55px;
     }
     .tl-item {
@@ -2221,6 +2221,14 @@ body.loaded {
 
 .faq-item.active .faq-toggle {
     transform: rotate(180deg);
+}
+
+/* Accordion: hide answers by default, show only when active */
+.faq-answer {
+    display: none;
+}
+.faq-item.active .faq-answer {
+    display: block;
 }
 
 /* Ensure minimum tap target */
@@ -2448,5 +2456,17 @@ body.loaded {
     }
     .partner-item span {
         font-size: 0.8rem;
+    }
+}
+
+/* Mobile & Tablet FAQ: single-column accordion */
+@media (max-width: 1024px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer: center nav links on mobile/tablet */
+    .footer-links {
+        align-items: center;
     }
 }
